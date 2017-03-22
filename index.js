@@ -45,7 +45,8 @@ app.use("/", require("./routes/home"));
 app.use("/posts", require("./routes/posts"));
 app.use("/users", require("./routes/users"));
 
-// Port setting
-app.listen(3000, function(){
-    console.log("Server on!");
+// Start Server
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+    console.log('Server On!');
 });
