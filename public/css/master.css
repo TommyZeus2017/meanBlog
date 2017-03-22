@@ -1,6 +1,11 @@
 /* public/css/master.css */
 
 /* global style */
+footer{
+    text-align:center;
+    padding: 10px 0;
+}
+
 form label{
     padding: 3px;
     margin-bottom: 0;
