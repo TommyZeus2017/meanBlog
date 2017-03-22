@@ -4,7 +4,7 @@ var express = require("express");
 var router = express.Router();
 var User  = require("../models/User");
 
-// Index // 1
+// Index
 router.route("/").get(function(req, res){
     User.find({})
         .sort({username:1})
@@ -55,7 +55,7 @@ router.get("/:username/edit", function(req, res){
     }
 });
 
-// update // 2
+// update
 router.put("/:username",function(req, res, next){
     User.findOne({username:req.params.username})
         .select({password:1})
