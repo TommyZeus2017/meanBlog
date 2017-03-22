@@ -71,6 +71,13 @@ form .form-group{
     background-color: #F5F5F5;
     padding: 6px 15px;
 }
+.ellipsis{ /* 1 */
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* home style */
 .home h1{
@@ -118,6 +125,7 @@ form .form-group{
 .post-index .posts{
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    table-layout: fixed; /* 2 */
 }
 .post .posts th,
 .post .posts td
@@ -147,7 +155,10 @@ form .form-group{
     width: 100px;
     padding-right: 15px;
 }
-.post-new,
+.post .posts .author{
+    text-align: center;
+    width: 80px;
+}.post-new,
 .post-edit{
     max-width: 520px;
 }
