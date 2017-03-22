@@ -11,7 +11,7 @@ var path            = require('path');
 var app             = express();
 
 // DB setting
-mongoose.connect(process.env.MONGO_DB_MEANBLOG);
+mongoose.connect('mongodb://root:admin@ds137360.mlab.com:37360/welcomeblog');
 var db = mongoose.connection;
 db.once("open", function(){
     console.log("DB connected");
